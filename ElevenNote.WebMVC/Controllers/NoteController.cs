@@ -15,7 +15,24 @@ namespace ElevenNote.WebMVC.Controllers
         {
             var model = new NoteListItem[0];    //instantiating a new instance of the NoteListItem as an IEnumerable with the [0] syntax
             return View(model);
-            //
+        }
+
+        //GET: CREATE
+        public ActionResult Create()        //This method: making a request to get the Create View.
+        {
+            return View();
+        }
+
+        //POST: CREATE
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(NoteCreate model)
+        {
+            if (ModelState.IsValid)
+            {
+
+            }
+            return View(model);
         }
     }
 }
