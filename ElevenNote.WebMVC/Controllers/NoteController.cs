@@ -66,6 +66,7 @@ namespace ElevenNote.WebMVC.Controllers
             var model =
                 new NoteEdit
                 {
+                    CategoryId = detail.CategoryId,
                     NoteId = detail.NoteId,
                     Title = detail.Title,
                     Content = detail.Content
